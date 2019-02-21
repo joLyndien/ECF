@@ -1,0 +1,12 @@
+<nav>
+
+    {% if app.session.get('utilNom') %}
+        Bonjour {{ app.session.get ('utilNom') }}
+        <a href ="{{ path ('deconnexion') }}">Deconnexion</a>
+    {% else %}
+        <a href ="{{ path ('connection') }}">Connection</a>
+        <a href ="{{ path ('inscription') }}">Inscription</a>
+    {% endif %}
+    {#<a href ="{{ path ('inscription') }}">Administrateur</a>#}
+
+</nav>
